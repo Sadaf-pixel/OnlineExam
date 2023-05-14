@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Examination System</title>
+  <style>
+    #video {
+  position: fixed;
+  top: 0;
+  right: 5px;
+  width: 150px;
+  height: 150px;
+}
+
+.sidebar {
+      width: 150px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #72bcd4;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    .sidebar h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    .sidebar a:hover {
+      background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f     74%);
+    }
+
+ .main {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    
+    .question {
+      margin-bottom: 20px;
+    }
+    
+    .question p {
+      font-weight: bold;
+    }
+    
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+    
+    .option {
+      display: flex;
+      align-items: center;
+    }
+    
+    .option input[type="radio"] {
+      margin-right: 10px;
+    }
+    
+
+
+.btn{
+  padding: 5px 8px;
+  
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f     74%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Exam Sections</h2>
+    <ul>
+      <li><a href="#section-1">Section 1</a></li>
+      <li><a href="#section-2">Section 2</a></li>
+      <li><a href="#section-3">Section 3</a></li>
+    </ul>
+  </div>
+  <!-- Display webcam and microphone streams -->
+  <div id="video-container">
+    <video id="video" autoplay></video>
+    <audio id="audio" autoplay></audio>
+  </div>
+<div class="main">
+    <div class="container">
+      <h2 style="text-align: center;">Do not move you are under CCTV surveillance</h2><br>
+      <div id="section-1">
+        <h3>Section 1</h3>
+    
+    <div class="question">
+      <p>1. What is the capital of France?</p>
+      <div class="options">
+        <div class="option">
+          <input type="radio" name="q1" value="Paris">a) Paris
+          <!-- <label for="q1a">a) Paris</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q1" value="London">b) London
+          <!-- <label for="q1b">b) London</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q1" value="Berlin">c) Berlin          
+          <!-- <label for="q1c">c) Berlin</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q1" value="Rome">d) Rome
+          <!-- <label for="q1d">d) Rome</label> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>2. Which planet is known as the Red Planet?</p>
+      <div class="options">
+        <div class="option">
+          <input type="radio" name="q2" value="Mars">a) Mars
+          <!-- <label for="q2a">a) Mars</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q2" value="Venus">b) Venus
+          <!-- <label for="q2b">b) Venus</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q2" value="Uranus">c) Uranus
+          <!-- <label for="qc">c) Uranus</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q2" value="Jupiter">d) Jupiter
+          <!-- <label for="qd">d) Jupiter</label> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+          <p>3. What is the capital of India?</p>
+      <div class="options">
+        <div class="option">
+          <input type="radio" name="q3"  value="Kolkata">a) Kolkata
+          <!-- <label for="q3a">a) Kolkata</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q3"  value="Chennai">b) Chennai
+          <!-- <label for="q3b">b) Chennai</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q3"  value="Mumbai">c) Mumbai
+          <!-- <label for="q3c">c) Mumbai</label> -->
+        </div>      
+        <div class="option">
+          <input type="radio" name="q3" value="New Delhi">d) New Delhi
+          <!-- <label for="q3d">d) New Delhi</label> -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="question">
+          <p>4. What city is know as Pink City?</p>
+      <div class="options">
+        <div class="option">
+          <input type="radio" name="q4"  value="Udaipur">a) Udaipur
+          <!-- <label for="q4a">a) Udaipur</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q4"  value="Jaipur">b) Jaipur
+          <!-- <label for="q4b">b) Jaipur</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q4"  value="Goa">c) Goa
+          <!-- <label for="q4c">c) Goa</label> -->
+        </div>
+        <div class="option">
+          <input type="radio" name="q4"  value="Tokyo">d) Tokyo
+          <!-- <label for="q4d">d) Tokyo</label> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>5. Who is the Prime Minister of India?</p>
+  <div class="options">
+    <div class="option">
+      <input type="radio" name="q5"  value="Lalit Modi">a) Lalit Modi
+      <!-- <label for="q5a">a) Lalit Modi</label> -->
+    </div>
+    <div class="option">
+      <input type="radio" name="q5"  value="Nirav Modi">b) Nirav Modi
+      <!-- <label for="q5b">b) Nirav Modi</label> -->
+    </div>
+    <div class="option">
+      <input type="radio" name="q5"  value="Narendra Modi">c) Narendra Modi
+      <!-- <label for="q5c">c) Narendra Modi</label> -->
+    </div>
+    <div class="option">
+      <input type="radio" name="q5"  value="Vijay Mallaya">d) Vijay Mallaya
+      <!-- <label for="q5d">d) Vijay Mallaya</label> -->
+    </div>
+  </div>
+    </div>
+  
+  <!-- Submit button -->
+  <button  class="btn" onclick="submitExam()">Submit</button>
+
+  <script>
+    // Access webcam and microphone streams
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(function(stream) {
+        var videoElement = document.getElementById('video');
+        var audioElement = document.getElementById('audio');
+        videoElement.srcObject = stream;
+        audioElement.srcObject = stream;
+      })
+      .catch(function(err) {
+        console.log('Error accessing webcam and microphone:', err);
+      });
+
+    // Handle exam submission
+    function submitExam() {
+      // Retrieve answers
+      var q1Answer = document.querySelector('input[name="q1"]:checked');
+      var q2Answer = document.querySelector('input[name="q2"]:checked');
+      var q3Answer = document.querySelector('input[name="q3"]:checked');
+      var q4Answer = document.querySelector('input[name="q4"]:checked');
+      var q5Answer = document.querySelector('input[name="q5"]:checked');
+
+
+      // Check if all questions are answered
+      if (q1Answer && q2Answer && q3Answer && q4Answer && q5Answer) {
+        // Process answers and calculate score
+        var score = 0;
+        if (q1Answer.value === "Paris") {
+          score++;
+        }
+        if (q2Answer.value === "Mars") {
+          score++;
+        }
+        if (q3Answer.value === "New Delhi") {
+          score++;
+        }
+        if (q4Answer.value === "Jaipur") {
+          score++;
+        }
+        if (q5Answer.value === "Narendra Modi") {
+          score++;
+        }
+
+        // Display score
+        alert('Your score: ' + score + ' out of 5');
+      } else {
+        alert('Please answer all questions before submitting.');
+      }
+    }
+  </script>
+</body>
+</html>

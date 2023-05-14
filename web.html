@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Examination System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(Images/log_bg.jpg);
+      background-size: cover;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      background-color: #f2f2f2;
+    }
+    
+    video {
+      width: 100%;
+      max-height: 100%;
+    }
+    
+    .capture-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn a{
+    color: #fff;
+  text-decoration: none;
+}
+   
+.head-text{
+    color: rgb(37, 5, 45);
+}
+
+    .capture-btn button {
+      padding: 10px 20px;
+      background-color: #537895;
+      background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .capture-btn button:hover {
+      background-color: #0d0a0b;
+      background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="head-text" >Online Examination </h1>
+    <h4  class="head-text" style="text-align: center;"  >Check your camera before you begin</h4>
+    <div class="video-container">
+      <video id="videoElement" autoplay></video>
+    </div>
+    <div class="capture-btn">
+      <button class="btn" id="captureButton"><a href="online_ex.html">Capture Image</a></button>
+    </div>
+  </div>
+
+  <script>
+    // Access the user's webcam and display the video stream in the video element
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        var videoElement = document.getElementById('videoElement');
+        videoElement.srcObject = stream;
+      })
+      .catch(function (error) {
+        console.error('Error accessing the webcam:', error);
+      });
+      
+    // Capture image from the video stream when the capture button is clicked
+    var captureButton = document.getElementById('captureButton');
+    captureButton.addEventListener('click', function () {
+      var videoElement = document.getElementById('videoElement');
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      canvas.width = videoElement.videoWidth;
+      canvas.height = videoElement.videoHeight;
+      context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+      
+      // Here, you can perform further operations with the captured image, such as sending it to the server or processing it.
+      // You will need to implement the backend logic and technologies to handle image processing and storage.
+    });
+  </script>
+</body>
+</html>

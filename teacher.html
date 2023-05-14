@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeacherDashboard</title>
+  <style>
+    body {
+      background-color: #734ae8;
+      background-image: linear-gradient(315deg, #734ae8 0%, #89d4cf 74%);
+
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 75vh;
+      min-width: 150vh;
+      background: #DDEFF5;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .card {
+      background: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+.btn a{
+    color: #777;
+  text-decoration: none;
+}
+    
+.card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .card p {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome,  Mr.Samiran Basak</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Create Question Paper</h3>
+        <p style="cursor: pointer;">Click to view create</p>
+      </div>
+      <div class="card">
+        <h3>Upload Question Paper</h3>
+        <p style="cursor: pointer;">Click to upload question paper</p>
+      </div>
+      <div class="card">
+        <h3>Check Answer</h3>
+        <p style="cursor: pointer;">Click to verify answers</p>
+      </div>
+      <div class="card">
+        <h3>Upload Result</h3>
+        <p   class="btn" style="cursor: pointer;"><a href="#">Click to upload result</a></p>
+      </div>
+      <div class="card">
+        <h3>Upload Admit Card</h3>
+        <p style="cursor: pointer;">Click to upload admit card</p>
+      </div>
+      <div class="card">
+        <h3>Upload Mark</h3>
+        <p style="cursor: pointer;">Click to upload mark</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

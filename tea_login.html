@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeacherLogIn</title>
+  <style>
+    body {
+      background-color :#aee1f9;
+      background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      width: 400px;
+      padding: 40px;
+      background: rgba(95, 74, 74, 0.25);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+      color: rgb(14, 13, 13);
+  
+    }
+    
+    .container input[type="text"],
+    .container input[type="password"],
+    .container input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgb(9, 0, 0);
+      outline: none;
+    }
+    
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #537895;
+      background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .container .btn{
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #537895;
+      background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    
+   
+
+.btn a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+    .container input[type="submit"]:hover {
+    background-color: #0d0a0b;
+background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 >Sign In</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <!-- <input type="submit" value="Log In"> -->
+      <button class="btn"><a href="teacher.html" >Log in</a></button>
+      <p class="btn"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Don't have an account ? &nbsp; <a href="register.html">Register</a></p>
+    </form>
+  </div>
+</body>
+</html>

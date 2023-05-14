@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudentDashboard</title>
+  <style>
+    body {
+
+      /*background-color: #10396c; */
+      background-color: #734ae8;
+      background-image: linear-gradient(315deg, #734ae8 0%, #89d4cf 74%);
+
+      /*
+      background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+      background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+      background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+      */
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 75vh;
+      min-width: 150vh;
+      background: #DDEFF5;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .card {
+      background: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+.btn a{
+    color: #777;
+  text-decoration: none;
+}
+    
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .card p {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, Zoya Sheikh</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Subjects</h3>
+        <p style="cursor: pointer;">Click to view subjects</p>
+      </div>
+      <div class="card">
+        <h3>Grades</h3>
+        <p>Your average grade is 87%.</p>
+      </div>
+      <div class="card">
+        <h3>Attendance</h3>
+        <p>Your attendance rate is 92%.</p>
+      </div>
+      <div class="card">
+        <h3>Exam</h3>
+        <p   class="btn" style="cursor: pointer;"><a href="exam.html">Click to know more</a></p>
+      </div>
+      <div class="card">
+        <h3>Result</h3>
+        <p style="cursor: pointer;">View Result</p>
+      </div>
+      <div class="card">
+        <h3>Enrollment Form</h3>
+        <p style="cursor: pointer;">Verify Your Details</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
